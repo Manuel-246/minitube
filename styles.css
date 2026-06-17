@@ -1,0 +1,58 @@
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,Arial,sans-serif}
+.app{min-height:100vh}
+.dark{background:#0f0f0f;color:#fff}
+.light{background:#f6f6f6;color:#111}
+
+.navbar{
+position:sticky;top:0;z-index:100;
+display:flex;align-items:center;gap:15px;
+padding:14px 20px;border-bottom:1px solid #333;
+backdrop-filter:blur(10px);
+}
+.dark .navbar{background:#181818}
+.light .navbar{background:white}
+.navbar h1 span{color:red}
+.searchWrap{flex:1;display:flex}
+.searchWrap input{
+flex:1;padding:12px 18px;border-radius:30px 0 0 30px;border:1px solid #444;
+}
+.searchWrap button{
+padding:12px 18px;border:none;border-radius:0 30px 30px 0;cursor:pointer;
+}
+.iconBtn{padding:10px 14px;border:none;border-radius:10px;cursor:pointer}
+
+.container{display:flex}
+.sidebar{
+width:240px;padding:15px;display:flex;flex-direction:column;gap:10px;
+}
+.sidebar button,.actions button{
+padding:12px;border:none;border-radius:12px;cursor:pointer;
+}
+.content{flex:1;padding:20px}
+.playerCard{
+padding:18px;border-radius:18px;background:rgba(255,255,255,.05);
+margin-bottom:20px;
+}
+.playerCard iframe{
+width:100%;height:500px;border:none;border-radius:15px;
+}
+.actions{display:flex;gap:10px;margin-top:12px}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+gap:18px;
+}
+.card{
+cursor:pointer;border-radius:16px;overflow:hidden;
+transition:.25s;background:rgba(255,255,255,.05);
+}
+.card:hover{transform:translateY(-4px)}
+.card img{width:100%;display:block}
+.info{padding:12px}
+.info p{opacity:.7;margin-top:6px}
+@media(max-width:768px){
+.sidebar{display:none}
+.playerCard iframe{height:250px}
+}
